@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Reservia</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Planifiez vos vacances">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b736d119f0.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav id="navigation">
+            <ul>
+                <li><a href="#section_activites">Activités</a></li>
+                <li><a href="#section_hebergements">Hébergements</a></li>
+                <li><a href="inscription.html">S'inscrire</a></li>
+            </ul>
+        </nav>
+    
+        <img src="images\logo\Reservia.png" alt="logo_Reservia"/>
+
+        <div>
+            <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
+            <h3>En plein centre-ville ou en pleine nature</h3>
+        </div>
+    </header>
+
+    <div>
+        <i class="fas fa-map-marker-alt"></i>
+        <form method="post" action="traitement_recherche_general.php">
+             <p><input type="search" name="recherche" id="recherche" Value="Marseille, France" /><input type="submit" value="Rechercher"></p>
+         </form>
+    </div>
+
+    <div>
+        <strong>Filtres</strong>
+        <form method="GET" action="traitement_filtres.php">
+             <p>
+                <input type="checkbox" name="filtres" class="filtre_eco" id="eco">
+                <label for="eco">Economique</label>
+                        
+                <input type="checkbox" name="filtres" class="filtre_familial" id="familial" >
+                <label for="familial">Familial</label>
+
+                <input type="checkbox" name="filtres" class="filtre_romantique" id="romantique">
+                <label for="romantique">Romantique</label>
+                        
+                <input type="checkbox" name="filtres" class="filtre_animaux" id="animaux" >
+                <label for="animaux">Animaux autorisés</label>
+             </p>
+        </form>
+    </div>
+
+    
+    <i class="fas fa-info-circle"></i><data value="Plus de 500">Plus de 500 logements sont disponibles dans cette ville</data>
+    
+    <section>
+        <article>
+            <h1 id="section_hebergements">Hébergements à Marseille</h1>
+           <!-- <?php include("traitement_recherche_general.php"); ?> -->
+        </article>
+    
+
+        <aside>
+            <i class="fas fa-chart-line"></i>
+        </aside>
+    </section>
+
+    <article>
+        <h1 id="section_activites">Activités à ...</h1>
+        <!-- <?php include("traitement_recherche_general.php"); ?> -->
+    </article>
+
+</body>
+
+<footer>
+
+    <div>
+    <section id="footer-menu_a_propos" class="">
+        <h4>A propos</h4>
+        <ul class="">
+            <li><a href="fonctionnement_site.html">Fonctionnement du site</a></li>
+            <li><a href="cgv.html">Conditions générales de vente</a></li>
+            <li><a href="donnees_confidentialites.html">Données et confidentialité</a></li>
+        </ul>
+    </section>
+
+    <section id="footer-menu_hebergements" class="">
+        <h4>Nos hébergements</h4>
+        <ul class="">
+            <li><a href="charte_qualite.html">Charte qualité</a></li>
+            <li><a href="soummettre_votre_hotel.html">Soumettre votre hôtel</a></li>
+        </ul> 
+    </section>
+
+    <section id="footer-menu_assistance" class="">
+        <h4>Assistance</h4>
+        <ul class="">
+            <li><a href="centre_aide.html">Centre d'aide</a></li>
+            <li><a href="mailto:">Nous contacter</a></li>
+        </ul>
+    </section>
+
+    </div>
+
+        </footer>
+
+</html>

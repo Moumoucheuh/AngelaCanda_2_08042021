@@ -1,0 +1,46 @@
+/* Définition d'une nouvelle police : Raleway */
+
+* {
+  font-family: "Raleway", sans-serif;
+}
+
+/* Mise en forme des filtres - icons FA cliquables */
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"].filtres + label::before {
+  font-size: 1.2em;
+  margin: 0 0.5rem;
+}
+input[type="checkbox"].filtres:checked + label::before {
+}
+input[type="checkbox"].filtre_eco + label::before {
+  font-family: "FontAwesome";
+  content: "\f53a";
+  color: #0065fc;
+}
+input[type="checkbox"].filtre_familial + label::before {
+  font-family: "FontAwesome";
+  content: "\f1ae";
+  color: #0065fc;
+}
+input[type="checkbox"].filtre_romantique + label::before {
+  font-family: "FontAwesome";
+  content: "\f004";
+  color: #0065fc;
+}
+input[type="checkbox"].filtre_animaux + label::before {
+  font-family: "FontAwesome";
+  content: "\f6d3";
+  color: #0065fc;
+}
+
+/* Mise en forme du menu principal */
+
+/* Mise en forme des titres header */
+
+/* Mise en forme de la recherche - avec changement de deco bouton --> rechercher devient une loupe FA */
+
+/* Mise en forme section hebergements */
