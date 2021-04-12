@@ -4,6 +4,37 @@
   font-family: "Raleway", sans-serif;
 }
 
+/* Mises en forme générales */
+footer {
+  background-color: #f2f2f2;
+}
+
+aside {
+  background-color: #f2f2f2;
+}
+
+.retour_results-heberg {
+  background-color: #f2f2f2;
+}
+
+.result_heb {
+  background-color: white;
+}
+
+.fas.fa-info-circle {
+  color: white;
+  background-color: #0065fc;
+  border-color: #f2f2f2;
+}
+
+.fas.fa-star {
+  color: #0065fc;
+}
+
+#grey_star {
+  color: grey;
+}
+
 /* Mise en forme des filtres - icons FA cliquables */
 
 input[type="checkbox"] {
