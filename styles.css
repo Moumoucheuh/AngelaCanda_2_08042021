@@ -1,24 +1,6 @@
 /* Définition d'une nouvelle police : Raleway */
-
 * {
   font-family: "Raleway", sans-serif;
-}
-
-/* Mises en forme générales */
-footer {
-  background-color: #f2f2f2;
-}
-
-aside {
-  background-color: #f2f2f2;
-}
-
-.retour_results-heberg {
-  background-color: #f2f2f2;
-}
-
-.result_heb {
-  background-color: white;
 }
 
 .fas.fa-info-circle {
@@ -33,6 +15,93 @@ aside {
 
 #grey_star {
   color: grey;
+}
+
+/* Mise en forme du menu principal */
+#menu_principal {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#navigation {
+  position: relative;
+  float: right;
+}
+
+/* Mise en forme des titres header */
+
+/* Mise en forme de la recherche - avec changement de deco bouton --> rechercher devient une loupe FA */
+.fas.fa-map-marker-alt {
+}
+
+input[type="submit"] {
+  background-color: #0065fc;
+  color: white;
+  border-radius: 5px;
+}
+
+/* Mise en forme section hebergements */
+#contenu_heb {
+  background-color: white;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+
+#retour_results_heberg {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+}
+
+.result_heb {
+  background-color: white;
+}
+
+#results_heb_ville {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: 20%;
+}
+
+aside {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+}
+
+.fas.fa-chart-line {
+  margin-right: 50px;
+}
+
+#titre_populaires {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#affich_3_populaires {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mise en forme section activités */
+#results_activites {
+  display: flex;
+  flex-direction: row;
+}
+
+#activites2_3 {
+  display: flex;
+  flex-direction: column;
+}
+
+#activites5_6 {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Mise en forme des filtres - icons FA cliquables */
@@ -68,10 +137,14 @@ input[type="checkbox"].filtre_animaux + label::before {
   color: #0065fc;
 }
 
-/* Mise en forme du menu principal */
+/* Mises en forme footer */
+footer {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
 
-/* Mise en forme des titres header */
-
-/* Mise en forme de la recherche - avec changement de deco bouton --> rechercher devient une loupe FA */
-
-/* Mise en forme section hebergements */
+.footer_nav {
+  list-style-type: none;
+}
