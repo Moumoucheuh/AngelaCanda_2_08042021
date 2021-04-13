@@ -1,4 +1,4 @@
-/* Définition d'une nouvelle police : Raleway */
+/* Mises en page */
 * {
   font-family: "Raleway", sans-serif;
 }
@@ -13,7 +13,31 @@
   color: #0065fc;
 }
 
-#grey_star {
+#grey {
+  color: grey;
+}
+
+#grey1 {
+  color: grey;
+}
+
+#grey2 {
+  color: grey;
+}
+
+#grey3 {
+  color: grey;
+}
+
+#grey4 {
+  color: grey;
+}
+
+#grey5 {
+  color: grey;
+}
+
+#grey6 {
   color: grey;
 }
 
@@ -28,6 +52,26 @@
 #navigation {
   position: relative;
   float: right;
+}
+
+#inscription {
+  color: #0065fc;
+}
+
+nav li {
+  margin-right: 15px;
+  color: grey;
+}
+
+nav a {
+  font-size: 1.3em;
+  padding-top: 5px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #0065fc;
+  border-top: 3px solid #0065fc;
 }
 
 /* Mise en forme des titres header */
@@ -120,6 +164,9 @@ input[type="checkbox"].filtre_eco + label::before {
   font-family: "FontAwesome";
   content: "\f53a";
   color: #0065fc;
+  border-radius: 100%;
+  border-color: #deebff;
+  background-color: #deebff;
 }
 input[type="checkbox"].filtre_familial + label::before {
   font-family: "FontAwesome";
