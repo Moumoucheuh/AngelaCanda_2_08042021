@@ -16,9 +16,9 @@
     <header>
         <nav id="navigation">
             <ul id="menu_principal">
-                <li><a href="#section_activites">Activités</a></li>
-                <li><a href="#section_hebergements">Hébergements</a></li>
-                <li><a href="inscription.html">S'inscrire</a></li>
+                <li class="nav_site"><a href="#section_hebergements">Hébergements</a></li>
+                <li class="nav_site"><a href="#section_activites">Activités</a></li>
+                <li><a href="" id="inscription">S'inscrire</a></li>
             </ul>
         </nav>
     
@@ -32,7 +32,7 @@
 
     <div>
         <i class="fas fa-map-marker-alt"></i>
-        <form method="post" action="traitement_recherche_general.php">
+        <form method="post" action="">
              <p><input type="search" name="recherche" id="recherche" Value="Marseille, France" /><input type="submit" value="Rechercher"></p>
          </form>
     </div>
@@ -59,8 +59,8 @@
     
     <i class="fas fa-info-circle"></i><data value="Plus de 500">Plus de 500 logements sont disponibles dans cette ville</data>
     
-    <div id="contenu_heb">
-        <section class="retour_results_heberg" id="retour_results_heberg">
+    <section id="contenu_heb">
+        <div class="retour_results_heberg" id="retour_results_heberg">
             <h1 id="section_hebergements">Hébergements à Marseille</h1>
             <div id="results_heb_ville">
                 <div class="result_heb" id="result1">
@@ -105,7 +105,7 @@
                     <div class="evaluation"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                 </div>
             </div>
-        </section>
+        </div>
     
 
         <aside id="populaires">
@@ -140,7 +140,7 @@
 
             </div>
         </aside>
-    </div>
+    </section>
 
     <section class="retour_results-activites" id="retour_results_activites">
         <h1 id="section_activites">Activités à Marseille</h1>
@@ -187,25 +187,25 @@
     <section id="footer-menu_a_propos" class="">
         <h4>A propos</h4>
         <ul class="footer_nav">
-            <li><a href="fonctionnement_site.html">Fonctionnement du site</a></li>
-            <li><a href="cgv.html">Conditions générales de vente</a></li>
-            <li><a href="donnees_confidentialites.html">Données et confidentialité</a></li>
+            <li><a href="">Fonctionnement du site</a></li>
+            <li><a href="">Conditions générales de vente</a></li>
+            <li><a href="">Données et confidentialité</a></li>
         </ul>
     </section>
 
     <section id="footer-menu_hebergements" class="">
         <h4>Nos hébergements</h4>
         <ul class="footer_nav">
-            <li><a href="charte_qualite.html">Charte qualité</a></li>
-            <li><a href="soummettre_votre_hotel.html">Soumettre votre hôtel</a></li>
+            <li><a href="">Charte qualité</a></li>
+            <li><a href="">Soumettre votre hôtel</a></li>
         </ul> 
     </section>
 
     <section id="footer-menu_assistance" class="">
         <h4>Assistance</h4>
         <ul class="footer_nav">
-            <li><a href="centre_aide.html">Centre d'aide</a></li>
-            <li><a href="mailto:">Nous contacter</a></li>
+            <li><a href="">Centre d'aide</a></li>
+            <li><a href="">Nous contacter</a></li>
         </ul>
     </section>
 
