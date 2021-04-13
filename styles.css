@@ -1,42 +1,24 @@
-/* Mises en page */
+/* Mises en page générale*/
 * {
   font-family: "Raleway", sans-serif;
 }
 
-.fas.fa-info-circle {
-  color: white;
-  background-color: #0065fc;
-  border-color: #f2f2f2;
+#main_wrapper {
+  width: 900px;
+  margin: auto;
 }
 
+/* Mise en page FA icons evaluations */
 .fas.fa-star {
   color: #0065fc;
 }
 
-#grey {
-  color: grey;
-}
-
-#grey1 {
-  color: grey;
-}
-
-#grey2 {
-  color: grey;
-}
-
-#grey3 {
-  color: grey;
-}
-
-#grey4 {
-  color: grey;
-}
-
-#grey5 {
-  color: grey;
-}
-
+#grey,
+#grey1,
+#grey2,
+#grey3,
+#grey4,
+#grey5,
 #grey6 {
   color: grey;
 }
@@ -52,6 +34,7 @@
 #navigation {
   position: relative;
   float: right;
+  padding-top: 2%;
 }
 
 #inscription {
@@ -70,8 +53,13 @@ nav a {
 }
 
 nav a:hover {
-  color: #0065fc;
-  border-top: 3px solid #0065fc;
+  color: #0065fc !important;
+  border-top: 2px solid #0065fc;
+}
+
+nav a:visited {
+  text-decoration: none;
+  color: grey;
 }
 
 /* Mise en forme des titres header */
@@ -80,10 +68,45 @@ nav a:hover {
 .fas.fa-map-marker-alt {
 }
 
+#recherche {
+  border: 1px solid #f2f2f2;
+  height: 30px;
+  font-weight: bold;
+}
+
 input[type="submit"] {
   background-color: #0065fc;
   color: white;
-  border-radius: 5px;
+  border-color: #0065fc;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  height: 30px;
+}
+
+/* Mise en forme des filtres - icons FA cliquables */
+.custom-checkbox input[type="checkbox"],
+.custom-checkbox .checked {
+  display: none;
+}
+
+.custom-checkbox input[type="checkbox"],
+.custom-checkbox .unchecked {
+  color: #0065fc;
+}
+.custom-checkbox input[type="checkbox"]:checked ~ .checked {
+  display: inline-block;
+  color: #800757;
+}
+
+.custom-checkbox input[type="checkbox"]:checked ~ .unchecked {
+  display: none;
+}
+
+/* Mise en forme info nbr d'heb dispo ville saisie */
+.fas.fa-info-circle {
+  color: white;
+  background-color: #0065fc;
+  border-color: #f2f2f2;
 }
 
 /* Mise en forme section hebergements */
@@ -109,6 +132,9 @@ input[type="submit"] {
   flex-direction: row;
   flex-wrap: wrap;
   margin-right: 20%;
+}
+.nom_heb {
+  font-weight: bold;
 }
 
 aside {
@@ -148,40 +174,8 @@ aside {
   flex-direction: column;
 }
 
-/* Mise en forme des filtres - icons FA cliquables */
-
-input[type="checkbox"] {
-  display: none;
-}
-
-input[type="checkbox"].filtres + label::before {
-  font-size: 1.2em;
-  margin: 0 0.5rem;
-}
-input[type="checkbox"].filtres:checked + label::before {
-}
-input[type="checkbox"].filtre_eco + label::before {
-  font-family: "FontAwesome";
-  content: "\f53a";
-  color: #0065fc;
-  border-radius: 100%;
-  border-color: #deebff;
-  background-color: #deebff;
-}
-input[type="checkbox"].filtre_familial + label::before {
-  font-family: "FontAwesome";
-  content: "\f1ae";
-  color: #0065fc;
-}
-input[type="checkbox"].filtre_romantique + label::before {
-  font-family: "FontAwesome";
-  content: "\f004";
-  color: #0065fc;
-}
-input[type="checkbox"].filtre_animaux + label::before {
-  font-family: "FontAwesome";
-  content: "\f6d3";
-  color: #0065fc;
+.lieu {
+  font-weight: bold;
 }
 
 /* Mises en forme footer */
