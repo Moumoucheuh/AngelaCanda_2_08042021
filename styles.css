@@ -3,9 +3,14 @@
   font-family: "Raleway", sans-serif;
 }
 
+/* test pour "lisibilité page, mais attention, à réadapter en fonction des différentes sections et replacer au bon endroit css pour compréhension */
+img {
+  width: 200px;
+  height: 100px;
+}
+
 #main_wrapper {
-  width: 900px;
-  margin: auto;
+  /* width: et margin: */
 }
 
 /* Mise en page FA icons evaluations */
@@ -32,8 +37,8 @@
 }
 
 #navigation {
-  position: relative;
-  float: right;
+  display: flex;
+  justify-content: flex-end;
   padding-top: 2%;
 }
 
@@ -41,23 +46,27 @@
   color: #0065fc;
 }
 
-nav li {
+#navigation li#inscription a:visited {
+  color: #0065fc;
+}
+
+#navigation li {
   margin-right: 15px;
   color: grey;
 }
 
-nav a {
+#navigation a {
   font-size: 1.3em;
-  padding-top: 5px;
+  padding-top: 30px;
   text-decoration: none;
 }
 
-nav a:hover {
+#navigation a:hover {
   color: #0065fc !important;
   border-top: 2px solid #0065fc;
 }
 
-nav a:visited {
+#navigation a:visited {
   text-decoration: none;
   color: grey;
 }
@@ -65,7 +74,22 @@ nav a:visited {
 /* Mise en forme des titres header */
 
 /* Mise en forme de la recherche - avec changement de deco bouton --> rechercher devient une loupe FA */
+#recherche_form {
+  display: flex;
+  justify-content: flex-start;
+  height: 30px;
+}
+
+#search_ville {
+  background-color: #f2f2f2;
+  border: 1px solid #f2f2f2;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
 .fas.fa-map-marker-alt {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #recherche {
@@ -84,6 +108,26 @@ input[type="submit"] {
 }
 
 /* Mise en forme des filtres - icons FA cliquables */
+#search_filters {
+  display: flex;
+  flex-direction: row;
+}
+
+label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.intitule {
+  border-top: 1px solid #deebff;
+  border-bottom: 1px solid #deebff;
+  border-right: 1px solid #deebff;
+  border-top-right-radius: 45px;
+  border-bottom-right-radius: 45px;
+  height: 30px;
+}
+
 .custom-checkbox input[type="checkbox"],
 .custom-checkbox .checked {
   display: none;
@@ -102,44 +146,74 @@ input[type="submit"] {
   display: none;
 }
 
+.custom-checkbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border: 2px solid #deebff;
+  background-color: #deebff;
+  border-radius: 100%;
+}
+
 /* Mise en forme info nbr d'heb dispo ville saisie */
-.fas.fa-info-circle {
-  color: white;
-  background-color: #0065fc;
-  border-color: #f2f2f2;
+.fas.fa-info {
+  color: #0065fc;
+}
+
+#cerclage {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 2px solid #f2f2f2;
+  border-radius: 50%;
 }
 
 /* Mise en forme section hebergements */
 #contenu_heb {
-  background-color: white;
   justify-content: space-between;
   display: flex;
   flex-direction: row;
-  background-color: white;
 }
 
-#retour_results_heberg {
+.retour_results_heberg {
   background-color: #f2f2f2;
-  border-radius: 10px;
+  border-radius: 45px;
+  width: 60%;
 }
 
 .result_heb {
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 45px;
+  justify-content: flex-start;
+  box-shadow: 5px 5px 5px #f2f2f298;
+}
+
+.img_heb img {
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
+  margin: 10px;
+  align-self: center;
 }
 
 #results_heb_ville {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-right: 20%;
+  flex-flow: row wrap;
 }
+
 .nom_heb {
   font-weight: bold;
 }
 
 aside {
   background-color: #f2f2f2;
-  border-radius: 10px;
+  border-radius: 45px;
+  width: 30%;
 }
 
 .fas.fa-chart-line {
@@ -158,10 +232,34 @@ aside {
   flex-direction: column;
 }
 
+.populaire {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-top-left-radius: 45px;
+  border-bottom-left-radius: 45px;
+  box-shadow: 5px 5px 5px #f2f2f298;
+}
+
+.populaire img {
+  border-top-left-radius: 45px;
+  border-bottom-left-radius: 45px;
+}
+
+.img,
+.txt {
+  margin: 10px;
+}
+
 /* Mise en forme section activités */
 #results_activites {
   display: flex;
   flex-direction: row;
+}
+
+#results_activites img {
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
 }
 
 #activites2_3 {
@@ -172,6 +270,16 @@ aside {
 #activites5_6 {
   display: flex;
   flex-direction: column;
+}
+
+#activite1,
+#actvite2,
+#activite3,
+#activite4,
+#activite5,
+#activite6 {
+  border-radius: 45px;
+  box-shadow: 5px 5px 5px #f2f2f298;
 }
 
 .lieu {
@@ -188,4 +296,9 @@ footer {
 
 .footer_nav {
   list-style-type: none;
+}
+
+.footer_nav a {
+  text-decoration: none;
+  color: black;
 }
