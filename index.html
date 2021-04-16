@@ -38,58 +38,38 @@
         </div>
 
         <div>
-            <strong>Filtres</strong>
-            <div id="search_filters">
-                <p id="filtres">
-                    <label>
-                        <div class="custom-checkbox">
-                            <input type="checkbox" />
-                            <i class="fas fa-money-bill-wave unchecked"></i>
-                            <i class="fas fa-money-bill-wave checked"></i>
-                        </div>
-                        <div class="intitule">
+            <form method="post">
+                <p class="filtres">
+                    <label for="eco" class="custom-checkbox">
+                        <input type="checkbox" name="eco" id="eco" /> 
+                        <i class="fas fa-money-bill-wave unchecked"></i>
+                        <i class="fas fa-money-bill-wave checked"></i>
                         Economique
-                        </div>
                     </label>
-
-                    <label>
-                        <div class="custom-checkbox">
-                        <input type="checkbox" />
+                    <label for="familial" class="custom-checkbox">
+                        <input type="checkbox" name="familial" id="familial" /> 
                         <i class="fas fa-child unchecked"></i>
                         <i class="fas fa-child checked"></i>
-                        </div>
-                        <div class="intitule">
                         Familial
-                        </div>
                     </label>
-                        
-                    <label>
-                        <div class="custom-checkbox">
-                        <input type="checkbox" />
+                    <label for="romantique" class="custom-checkbox">
+                        <input type="checkbox" name="romantique" id="romantique" />
                         <i class="fas fa-heart unchecked"></i>
                         <i class="fas fa-heart checked"></i>
-                        </div>
-                        <div class="intitule">
                         Romantique
-                        </div>
                     </label>
-                      
-                    <label>
-                        <div class="custom-checkbox">
-                        <input type="checkbox" />
+                    <label for="animaux" class="custom-checkbox">
+                        <input type="checkbox" name="animaux" id="animaux" />
                         <i class="fas fa-dog unchecked"></i>
                         <i class="fas fa-dog checked"></i>
-                        </div>
-                        <div class="intitule">
-                        Animaux
-                        </div>
+                        Animaux autorisés
                     </label>
                 </p>
-            </div>
+            </form>
         </div>
 
     
-        <i class="fas fa-info" id="cerclage"></i><data value="Plus de 500">Plus de 500 logements sont disponibles dans cette ville</data>
+        <p><i class="fas fa-info" id="cerclage"></i>Plus de 500 logements sont disponibles dans cette ville</p>
     
         <section id="contenu_heb">
             <div class="retour_results_heberg" id="retour_results_heberg">
@@ -102,7 +82,7 @@
                         <div class="img_heb">
                             <img src="images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Auberge La Cannebière">
                         </div>
-                        <div="txt_heb">
+                        <div class="txt_heb">
                             <p class="nom_heb">Auberge la Cannebière</p>
                             <p class="prix">Nuit à partir de 25€</p>
                             <p class="evaluation"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star" id="grey"></i></p>
@@ -200,7 +180,7 @@
                     </div>
 
                     <div class="populaire">
-                        <div class="img"></div>
+                        <div class="img">
                             <img src="images/hebergements/3_medium/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Hôtel Tout bleu et blanc">
                         </div>
                         <div class="txt">
