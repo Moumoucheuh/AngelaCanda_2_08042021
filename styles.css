@@ -10,7 +10,9 @@ img {
 }
 
 #main_wrapper {
-  width: 900px;
+  width: 1440px;
+  margin-right: 50px;
+  margin-left: 50px;
 }
 
 /* Mise en page FA icons evaluations */
@@ -74,7 +76,7 @@ img {
 
 /* Mise en forme des titres header */
 
-/* Mise en forme de la recherche - avec changement de deco bouton --> rechercher devient une loupe FA */
+/* Mise en forme de la recherche */
 #recherche_form {
   display: flex;
   justify-content: flex-start;
@@ -275,6 +277,7 @@ aside {
 #affich_3_populaires {
   display: flex;
   flex-direction: column;
+  width: 682px;
 }
 
 .populaire {
@@ -284,6 +287,9 @@ aside {
   border-top-left-radius: 45px;
   border-bottom-left-radius: 45px;
   box-shadow: 5px 5px 5px #f2f2f298;
+  width: 344px;
+  margin-left: 38px;
+  margin-right: 38px;
 }
 
 .populaire a {
