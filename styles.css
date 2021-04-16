@@ -10,7 +10,7 @@ img {
 }
 
 #main_wrapper {
-  width: 75%;
+  width: 900px;
 }
 
 /* Mise en page FA icons evaluations */
@@ -34,6 +34,7 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  text-decoration: none;
 }
 
 #navigation {
@@ -108,6 +109,16 @@ input[type="submit"] {
 }
 
 /* Mise en forme des filtres - icons FA cliquables */
+#search_filters {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+legend {
+  font-weight: bold;
+}
+
 .filtres {
   display: flex;
   flex-direction: row;
@@ -123,7 +134,7 @@ input[type="submit"] {
   align-items: center;
   width: 35px;
   height: 35px;
-  margin-right: 15px;
+  margin-right: 10px;
 }
 
 .custom-checkbox input[type="checkbox"] {
@@ -148,14 +159,15 @@ input[type="submit"] {
 
 .custom-checkbox input[type="checkbox"]:checked ~ .checked {
   display: flex;
-  color: #800757;
-  border: 2px solid #deebff;
-  background-color: #deebff;
+  color: #deebff;
+  border: 2px solid #0065fc;
+  background-color: #0065fc;
   border-radius: 100%;
   justify-content: center;
   align-items: center;
   width: 35px;
   height: 35px;
+  box-shadow: 5px 5px 5px #f2f2f298;
 }
 
 .custom-checkbox input[type="checkbox"]:checked ~ .unchecked {
@@ -174,10 +186,12 @@ input[type="submit"] {
   align-items: center;
   justify-content: center;
   height: 50px;
-  border: 1px solid #f2f2f2;
-  border-left: 0px solid transparent;
-  border-top-left-radius: 65%;
-  border-bottom-left-radius: 65%;
+  font-weight: bold;
+  border-top: 2px solid #bdb8b8;
+  border-bottom: 2px solid #bdb8b8;
+  border-right: 2px solid #bdb8b8;
+  border-top-left-radius: 75%;
+  border-bottom-left-radius: 75%;
   border-top-right-radius: 45px;
   border-bottom-right-radius: 45px;
   height: 35px;
@@ -220,10 +234,15 @@ input[type="submit"] {
   box-shadow: 5px 5px 5px #f2f2f298;
 }
 
+.result_heb a {
+  text-decoration: none;
+  color: black;
+}
+
 .img_heb img {
   border-top-left-radius: 45px;
   border-top-right-radius: 45px;
-  margin: 10px;
+  margin: 4px;
   align-self: center;
 }
 
@@ -267,6 +286,11 @@ aside {
   box-shadow: 5px 5px 5px #f2f2f298;
 }
 
+.populaire a {
+  text-decoration: none;
+  color: black;
+}
+
 .populaire img {
   border-top-left-radius: 45px;
   border-bottom-left-radius: 45px;
@@ -274,13 +298,18 @@ aside {
 
 .img,
 .txt {
-  margin: 10px;
+  margin: 4px;
 }
 
 /* Mise en forme section activités */
 #results_activites {
   display: flex;
   flex-direction: row;
+}
+
+#results_activites a {
+  text-decoration: none;
+  color: black;
 }
 
 #results_activites img {
@@ -327,4 +356,10 @@ footer {
 .footer_nav a {
   text-decoration: none;
   color: black;
+}
+
+@media screen and(max-width: 1024px) {
+  #main_wrapper {
+    width: auto;
+  }
 }
