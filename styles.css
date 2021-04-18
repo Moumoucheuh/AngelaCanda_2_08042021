@@ -114,8 +114,8 @@ h4 {
 
 #recherche {
   border: 1px solid #f2f2f2;
-  font-weight: bolder;
-  font-size: 18px;
+  font-weight: bold;
+  font-size: large;
   width: 235px;
   padding-left: 17px;
 }
@@ -228,6 +228,7 @@ h3 {
 /* Mise en page FA icons evaluations */
 .fas.fa-star {
   color: #0065fc;
+  font-size: small;
 }
 
 #grey,
@@ -238,6 +239,7 @@ h3 {
 #grey5,
 #grey6 {
   color: grey;
+  font-size: small;
 }
 
 /* Mise en forme info nbr d'heb dispo ville saisie */
@@ -285,7 +287,6 @@ h3 {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  align-content: space-around;
 }
 
 .result_heb a {
@@ -310,44 +311,64 @@ h3 {
   width: 100%; /*236px*/
 }
 
+.txt_heb {
+  margin-left: 8%;
+}
 .nom_heb {
-  font-weight: bold;
+  font-weight: bolder;
+  font-size: medium;
+  margin: 0;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.prix {
+  font-size: small;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.evaluation {
+  margin-top: 0;
 }
 
 button {
   border: none;
   color: black;
+  font-size: large;
   font-weight: bold;
   align-self: flex-start;
-  margin-left: 37px;
+  margin-left: 30px;
   margin-bottom: 41px;
 }
 
 aside {
   background-color: #f2f2f2;
   border-radius: 20px;
-  width: 31%;
+  width: 31%; /* 420px */
   height: 624px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.fas.fa-chart-line {
-  margin-right: 50px;
-}
-
 #titre_populaires {
+  width: 82%;
+  margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  font-size: 1.3em;
+  font-weight: bolder;
 }
 
 #affich_3_populaires {
+  width: 82%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  margin: auto;
 }
 
 .populaire {
@@ -355,9 +376,8 @@ aside {
   flex-direction: row;
   background-color: white;
   box-shadow: 5px 5px 5px #f2f2f298;
-  width: 344px;
-  margin-left: 38px;
-  margin-right: 38px;
+  width: 100%;
+
   border-radius: 20px;
   margin-bottom: 31px;
 }
@@ -379,12 +399,8 @@ aside {
   width: 82%; /* 344px */
 }
 
-.img,
-.txt {
+.img {
   margin: 4px;
-}
-.txt {
-  padding-right: 50px;
 }
 
 /* Mise en forme section activités */
@@ -436,6 +452,7 @@ aside {
 }
 
 .lieu {
+  margin-top: 0;
   align-self: flex-start;
   font-weight: bold;
 }
