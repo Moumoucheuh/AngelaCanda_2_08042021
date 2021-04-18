@@ -3,49 +3,60 @@
   font-family: "Raleway", sans-serif;
 }
 
-/* test pour "lisibilité page, mais attention, à réadapter en fonction des différentes sections et replacer au bon endroit css pour compréhension */
-img {
-  width: 200px;
-  height: 100px;
-}
-
 #main_wrapper {
-  width: 1340px;
+  width: 1440px;
   margin: auto;
 }
 
-/* Mise en page FA icons evaluations */
-.fas.fa-star {
-  color: #0065fc;
+/* Mise en page header */
+header {
+  width: 93%;
+  margin: auto;
 }
 
-#grey,
-#grey1,
-#grey2,
-#grey3,
-#grey4,
-#grey5,
-#grey6 {
-  color: grey;
+#en_tete {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
-/* Mise en forme du menu principal */
+/* -------------- logo */
+#logo {
+  height: 45px;
+  width: auto;
+  margin-top: 0;
+}
+
+/* -------------- menu principal */
 #menu_principal {
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
   text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  width: 32%;
 }
 
 #navigation {
   display: flex;
   justify-content: flex-end;
   padding-top: 2%;
+  margin-bottom: 0;
+}
+
+#nav_site_heb,
+#nav_site_act {
+  width: 37%;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 #inscription {
   color: #0065fc;
+  width: auto;
 }
 
 #navigation li#inscription a:visited {
@@ -73,57 +84,79 @@ img {
   color: grey;
 }
 
-/* Mise en forme des titres header */
+/*----------- titres */
+h3 {
+  font-size: 22px;
+  font-family: "Raleway", sans-serif;
+}
 
+h4 {
+  font-weight: normal;
+}
 /* Mise en forme de la recherche */
+#bloc_recherche {
+  width: 93%;
+  margin: auto;
+}
 #recherche_form {
   display: flex;
   justify-content: flex-start;
-  height: 30px;
+  height: 50px;
 }
 
 #search_ville {
   background-color: #f2f2f2;
   border: 1px solid #f2f2f2;
-  border-top-left-radius: 7px;
-  border-bottom-left-radius: 7px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  height: 50px;
+}
+
+#recherche_form input[type="search"] {
+  height: 50px;
 }
 
 .fas.fa-map-marker-alt {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #recherche {
   border: 1px solid #f2f2f2;
-  height: 30px;
-  font-weight: bold;
+  font-weight: bolder;
+  font-size: 18px;
+  width: 235px;
+  padding-left: 17px;
 }
 
 input[type="submit"] {
   background-color: #0065fc;
   color: white;
+  font-weight: bold;
+  font-size: 18px;
   border-color: #0065fc;
-  border-top-right-radius: 7px;
-  border-bottom-right-radius: 7px;
-  height: 30px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: 134px;
 }
 
 /* Mise en forme des filtres - icons FA cliquables */
+#recherche_form {
+  margin-bottom: 20px;
+}
+
 #search_filters {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: flex-start;
 }
 
 h3 {
   font-weight: bold;
-}
-
-.filtres {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  font-size: 18px;
+  margin-right: 45px;
+  margin-left: 2px;
 }
 
 .custom-checkbox i {
@@ -133,8 +166,8 @@ h3 {
   border-radius: 100%;
   justify-content: center;
   align-items: center;
-  width: 35px;
-  height: 35px;
+  width: 48px;
+  height: 48px;
   margin-right: 10px;
 }
 
@@ -142,8 +175,8 @@ h3 {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 35px;
-  height: 35px;
+  width: 48px;
+  height: 48px;
   border-radius: 100%;
   background-color: #deebff;
   border-color: #deebff;
@@ -166,8 +199,8 @@ h3 {
   border-radius: 100%;
   justify-content: center;
   align-items: center;
-  width: 35px;
-  height: 35px;
+  width: 48px;
+  height: 48px;
   box-shadow: 5px 5px 5px #f2f2f298;
 }
 
@@ -178,6 +211,7 @@ h3 {
 .filtres {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -185,18 +219,34 @@ h3 {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   height: 50px;
   font-weight: bold;
   border-top: 2px solid #bdb8b8;
   border-bottom: 2px solid #bdb8b8;
   border-right: 2px solid #bdb8b8;
-  border-top-left-radius: 75%;
-  border-bottom-left-radius: 75%;
+
   border-top-right-radius: 45px;
   border-bottom-right-radius: 45px;
-  height: 35px;
+  height: 48px;
   padding-right: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Mise en page FA icons evaluations */
+.fas.fa-star {
+  color: #0065fc;
+}
+
+#grey,
+#grey1,
+#grey2,
+#grey3,
+#grey4,
+#grey5,
+#grey6 {
+  color: grey;
 }
 
 /* Mise en forme info nbr d'heb dispo ville saisie */
@@ -218,7 +268,16 @@ h3 {
   justify-content: space-between;
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 93%;
+  margin: auto;
+}
+.result_heb {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #f2f2f298;
+  height: 199px;
+  width: 28%; /* 246px */
+  margin-bottom: 5%; /* 31px */
 }
 
 .retour_results_heberg {
@@ -236,15 +295,6 @@ h3 {
   flex-flow: row wrap;
   justify-content: space-around;
   align-content: space-around;
-}
-
-.result_heb {
-  background-color: white;
-  border-radius: 20px;
-  box-shadow: 5px 5px 5px #f2f2f298;
-  height: 199px;
-  width: 28%; /* 246px */
-  margin-bottom: 5%; /* 31px */
 }
 
 .result_heb a {
@@ -342,7 +392,8 @@ aside {
 
 /* Mise en forme section activités */
 #retour_results_activites {
-  width: 100%;
+  width: 93%;
+  margin: auto;
   margin-bottom: 58px;
 }
 

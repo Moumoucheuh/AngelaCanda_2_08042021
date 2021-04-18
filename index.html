@@ -16,63 +16,64 @@
 <body>
     <div id="main_wrapper">
         <header>
-            <nav id="navigation">
-                <ul id="menu_principal">
-                    <li class="nav_site"><a href="#section_hebergements">Hébergements</a></li>
-                    <li class="nav_site"><a href="#section_activites">Activités</a></li>
-                    <li id="inscription"><a href="">S'inscrire</a></li>
-                </ul>
-            </nav>
-    
-            <img src="images/logo/Reservia.svg" alt="logo_Reservia">
+                           
+                <nav id="navigation">
+                    <ul id="menu_principal">
+                        <li class="nav_site" id="nav_site_heb"><a href="#section_hebergements">Hébergements</a></li>
+                        <li class="nav_site" id="nav_site_act"><a href="#section_activites">Activités</a></li>
+                        <li id="inscription"><a href="">S'inscrire</a></li>
+                    </ul>
+                </nav>
+
+                <img src="images/logo/Reservia.svg" alt="logo_Reservia" id="logo">
 
             <div>
-                <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
-                <h3>En plein centre-ville ou en pleine nature</h3>
+                <h3>Trouvez votre hébergement pour des vacances de rêve</h3>
+                <h4>En plein centre-ville ou en pleine nature</h4>
             </div>
         </header>
 
-        <div>
-            <form id="recherche_form">
-                <div id="search_ville"><i class="fas fa-map-marker-alt"></i><input type="search" name="recherche" id="recherche" Value="Marseille, France" /></div><input type="submit" value="Rechercher">
-            </form>
-        </div>
+        <div id="bloc_recherche">
+                <form id="recherche_form">
+                    <div id="search_ville"><i class="fas fa-map-marker-alt"></i><input type="search" name="recherche" id="recherche" Value="Marseille, France" size="31"/></div><input type="submit" value="Rechercher" size="40">
+                </form>
+        
 
-        <div>
-            <form method="post" id="search_filters">
-                <h3>Filtres</h3>
-                <p class="filtres">
-                    <label for="eco" class="custom-checkbox">
-                        <input type="checkbox" name="eco" id="eco" /> 
-                        <i class="fas fa-money-bill-wave unchecked"></i>
-                        <i class="fas fa-money-bill-wave checked"></i>
-                        Economique
-                    </label>
-                    <label for="familial" class="custom-checkbox">
-                        <input type="checkbox" name="familial" id="familial" /> 
-                        <i class="fas fa-child unchecked"></i>
-                        <i class="fas fa-child checked"></i>
-                        Familial
-                    </label>
-                    <label for="romantique" class="custom-checkbox">
-                        <input type="checkbox" name="romantique" id="romantique" />
-                        <i class="fas fa-heart unchecked"></i>
-                        <i class="fas fa-heart checked"></i>
-                        Romantique
-                    </label>
-                    <label for="animaux" class="custom-checkbox">
-                        <input type="checkbox" name="animaux" id="animaux" />
-                        <i class="fas fa-dog unchecked"></i>
-                        <i class="fas fa-dog checked"></i>
-                        Animaux autorisés
-                    </label>
-                </p>
-            </form>
-        </div>
-
-    
-        <p><i class="fas fa-info" id="cerclage"></i>Plus de 500 logements sont disponibles dans cette ville</p>
-    
+            <div>
+                <form method="post" id="search_filters">
+                    <h3>Filtres</h3>
+                    <p class="filtres">
+                        <label for="eco" class="custom-checkbox">
+                            <input type="checkbox" name="eco" id="eco" /> 
+                            <i class="fas fa-money-bill-wave unchecked"></i>
+                            <i class="fas fa-money-bill-wave checked"></i>
+                            Economique
+                        </label>
+                        <label for="familial" class="custom-checkbox">
+                            <input type="checkbox" name="familial" id="familial" /> 
+                            <i class="fas fa-child unchecked"></i>
+                            <i class="fas fa-child checked"></i>
+                            Familial
+                        </label>
+                        <label for="romantique" class="custom-checkbox">
+                            <input type="checkbox" name="romantique" id="romantique" />
+                            <i class="fas fa-heart unchecked"></i>
+                            <i class="fas fa-heart checked"></i>
+                            Romantique
+                        </label>
+                        <label for="animaux" class="custom-checkbox">
+                            <input type="checkbox" name="animaux" id="animaux" />
+                            <i class="fas fa-dog unchecked"></i>
+                            <i class="fas fa-dog checked"></i>
+                            Animaux autorisés
+                        </label>
+                    </p>
+                </form>
+            </div>
+          
+            <p><i class="fas fa-info" id="cerclage"></i>Plus de 500 logements sont disponibles dans cette ville</p>
+        </div>   
+         
         <section id="contenu_heb">
             <div class="retour_results_heberg" id="retour_results_heberg">
 
