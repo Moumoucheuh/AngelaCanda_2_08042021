@@ -257,6 +257,7 @@ h3 {
 }
 
 /* Mise en forme section hebergements */
+
 #contenu_heb {
   justify-content: space-between;
   display: flex;
@@ -269,14 +270,14 @@ h3 {
   border-radius: 20px;
   box-shadow: 5px 5px 5px #f2f2f298;
   height: 199px;
-  width: 28%; /* 246px */
-  margin-bottom: 5%; /* 31px */
+  width: 31%; /* 246px */
 }
 
 .retour_results_heberg {
   background-color: #f2f2f2;
   border-radius: 20px;
   width: 66%;
+  max-width: 880px;
   height: 624px;
   display: flex;
   flex-direction: column;
@@ -284,9 +285,13 @@ h3 {
 }
 
 #results_heb_ville {
+  width: 91%;
+  height: 428px;
+  margin: auto;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-content: space-between;
 }
 
 .result_heb a {
@@ -401,6 +406,9 @@ aside {
 
 .img {
   margin: 4px;
+}
+
+.populaire .evaluation {
 }
 
 /* Mise en forme section activités */
