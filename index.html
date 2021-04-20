@@ -15,8 +15,11 @@
 
 <body>
     <div id="main_wrapper">
-        <header id="en_tete">  
+
+        <header id="en_tete"> 
+             
             <img src="images/logo/Reservia.svg" alt="logo_Reservia" id="logo">
+
             <nav id="navigation">
                 <ul id="menu_principal">
                     <li class="nav_site" id="nav_site_heb"><a href="#section_hebergements">Hébergements</a></li>
@@ -24,11 +27,12 @@
                     <li id="inscription"><a href="">S'inscrire</a></li>
                 </ul>
             </nav>
+
         </header>    
 
         <div id="titres">
-            <h3>Trouvez votre hébergement pour des vacances de rêve</h3>
-            <h4>En plein centre-ville ou en pleine nature</h4>
+            <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
+            <p id="accroche">En plein centre-ville ou en pleine nature</p>
         </div>    
         
 
@@ -39,33 +43,13 @@
         
 
             <div>
-                <form method="post" id="search_filters">
-                    <h3>Filtres</h3>
-                    <p class="filtres">
-                        <label for="eco" class="custom-checkbox">
-                            <input type="checkbox" name="eco" id="eco" /> 
-                            <i class="fas fa-money-bill-wave unchecked"></i>
-                            <i class="fas fa-money-bill-wave checked"></i>
-                            Economique
-                        </label>
-                        <label for="familial" class="custom-checkbox">
-                            <input type="checkbox" name="familial" id="familial" /> 
-                            <i class="fas fa-child unchecked"></i>
-                            <i class="fas fa-child checked"></i>
-                            Familial
-                        </label>
-                        <label for="romantique" class="custom-checkbox">
-                            <input type="checkbox" name="romantique" id="romantique" />
-                            <i class="fas fa-heart unchecked"></i>
-                            <i class="fas fa-heart checked"></i>
-                            Romantique
-                        </label>
-                        <label for="animaux" class="custom-checkbox">
-                            <input type="checkbox" name="animaux" id="animaux" />
-                            <i class="fas fa-dog unchecked"></i>
-                            <i class="fas fa-dog checked"></i>
-                            Animaux autorisés
-                        </label>
+                <form>
+                    <p id="form">
+                        <strong>Filtres</strong>
+                        <input type="checkbox" id="eco"/><label for="eco" id="econo"> Economique</label>
+                        <input type="checkbox" id="familial"/> <label for="familial" id="family"> Familial</label>
+                        <input type="checkbox" id="romantique"/> <label for="romantique" id="romantic">Romantique</label>
+                        <input type="checkbox" id="animaux"/> <label for="animaux" id="pets">Animaux autorisés</label>
                     </p>
                 </form>
             </div>
@@ -280,36 +264,36 @@
 
             </div>
         </section>    
-    
-        <footer>
-
-            <section id="footer-menu_a_propos" class="">
-                <h4>A propos</h4>
+    </div>
+    <footer>
+        <div id="info_supp">
+            <section id="footer-menu_a_propos" class="links">
                 <ul class="footer_nav">
+                    <li class="title">A propos</li>
                     <li><a href="">Fonctionnement du site</a></li>
                     <li><a href="">Conditions générales de vente</a></li>
                     <li><a href="">Données et confidentialité</a></li>
                 </ul>
             </section>
-    
-            <section id="footer-menu_hebergements" class="">
-                <h4>Nos hébergements</h4>
-                <ul class="footer_nav">
+        
+            <section id="footer-menu_hebergements" class="links">
+                    <ul class="footer_nav">
+                    <li class="title">Nos hébergements</li>
                     <li><a href="">Charte qualité</a></li>
                     <li><a href="">Soumettre votre hôtel</a></li>
                 </ul> 
             </section>
-    
-            <section id="footer-menu_assistance" class="">
-                <h4>Assistance</h4>
+        
+            <section id="footer-menu_assistance" class="links">
                 <ul class="footer_nav">
+                    <li class="title">Assistance</li>
                     <li><a href="">Centre d'aide</a></li>
                     <li><a href="">Nous contacter</a></li>
-                </ul>
-            </section>
+                    </ul>
+                </section>
+        </div>        
+    </footer>
     
-        </footer>
-    </div>
 </body>
 
 </html>
