@@ -9,31 +9,18 @@
 }
 
 /* Mise en page header */
-#en_tete {
+#bandeau {
   /* contient le logo à gauche et le menu à droite */
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-top: 0px;
 }
-
-/* -------------- logo */
 
 /* -------------- menu principal */
 #navigation {
-  padding-top: 25px;
-}
-
-#menu_principal {
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-#nav_site_heb,
-#nav_site_act {
-  color: grey;
+  padding-top: 40px;
 }
 
 #inscription {
@@ -41,13 +28,19 @@
 }
 
 #menu_principal li {
+  list-style-type: none;
+  display: inline;
   font-size: medium;
   font-weight: bold;
-  margin-left: 75px;
 }
 
 #menu_principal a {
   text-decoration: none;
+  color: grey;
+  padding-top: 45px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-left: 10px;
 }
 
 #menu_principal li a:hover {
@@ -66,20 +59,20 @@
   color: #0065fc;
 }
 
-/*----------- titres */
-#titres {
-}
-
-h2 {
+h1 {
   font-size: X-large;
 }
 
-#accroche {
+#ss_titre {
   font-weight: normal;
 }
 /* Mise en forme de la recherche */
 #bloc_recherche {
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
 }
 #recherche_form {
   display: flex;
@@ -93,22 +86,26 @@ h2 {
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 #recherche_form input[type="search"] {
-  height: 50px;
+  height: 100%;
 }
 
 .fas.fa-map-marker-alt {
   padding-left: 20px;
   padding-right: 20px;
+  width: auto;
 }
 
 #recherche {
   border: 1px solid #f2f2f2;
   font-weight: bold;
   font-size: large;
-  width: 235px;
+  width: auto;
   padding-left: 17px;
 }
 
@@ -121,12 +118,16 @@ input[type="submit"] {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   width: 134px;
+  height: 100%;
 }
 
 /* Mise en forme des filtres - icons FA cliquables */
-#form {
+
+.form_filtres {
   font-weight: bolder;
   font-size: medium;
+  display: inline-block;
+  margin-right: 25px;
 }
 
 input[type="checkbox"] {
@@ -149,6 +150,16 @@ input[type="checkbox"] {
   text-align: right;
   padding-right: 15px;
   margin-right: 15px;
+  position: relative;
+}
+
+#econo:hover,
+#family:hover,
+#romantic:hover,
+#pets:hover {
+  border-top: 3px solid #deebff;
+  border-right: 3px solid #deebff;
+  border-bottom: 3px solid #deebff;
 }
 
 input[type="checkbox"] {
@@ -164,7 +175,7 @@ input[type="checkbox"] + label:before {
   width: 48px;
   align-items: center;
   justify-content: center;
-  margin-right: 12px;
+  margin-right: 10px;
 }
 
 #eco + label:before {
@@ -174,7 +185,8 @@ input[type="checkbox"] + label:before {
 
 #eco:checked + label:before {
   content: "\f53a";
-  background-color: #f2f2f2;
+  color: #deebff;
+  background-color: #0065fc;
 } /* checked */
 
 #familial + label:before {
@@ -184,7 +196,8 @@ input[type="checkbox"] + label:before {
 
 #familial:checked + label:before {
   content: "\f1ae";
-  background-color: #f2f2f2;
+  color: #deebff;
+  background-color: #0065fc;
 } /* checked */
 
 #romantique + label:before {
@@ -194,7 +207,8 @@ input[type="checkbox"] + label:before {
 
 #romantique:checked + label:before {
   content: "\f004";
-  background-color: #f2f2f2;
+  color: #deebff;
+  background-color: #0065fc;
 } /* checked */
 
 #animaux + label:before {
@@ -204,10 +218,40 @@ input[type="checkbox"] + label:before {
 
 #animaux:checked + label:before {
   content: "\f6d3";
-  background-color: #f2f2f2;
+  color: #deebff;
+  background-color: #0065fc;
 } /* checked */
 
-/* Mise en page FA icons evaluations */
+/* Mise en forme info nbr d'heb dispo ville saisie */
+.fas.fa-info {
+  color: #0065fc;
+}
+
+.far.fa-circle {
+  color: #f2f2f2;
+  font-weight: lighter;
+}
+
+.fa-stack {
+  font-size: 1em;
+}
+
+i {
+  vertical-align: middle;
+}
+
+/* Mise en forme main générale */
+.titre {
+  margin-top: 40px;
+  font-size: x-large;
+  font-weight: 900;
+}
+
+main img {
+  object-fit: cover;
+}
+
+/*----------- Mise en page FA icons evaluations */
 .fas.fa-star {
   color: #0065fc;
   font-size: small;
@@ -224,82 +268,75 @@ input[type="checkbox"] + label:before {
   font-size: small;
 }
 
-/* Mise en forme info nbr d'heb dispo ville saisie */
-.fas.fa-info {
-  color: #0065fc;
-}
-
-#cerclage {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border: 2px solid #f2f2f2;
-  border-radius: 50%;
-}
-
 /* Mise en forme section hebergements */
-
-#contenu_heb {
-  justify-content: space-between;
+#section_heb {
   display: flex;
   flex-direction: row;
-  margin: auto;
+  justify-content: space-between;
+  height: 624px;
+  margin-bottom: 80px;
 }
-.result_heb {
+
+#hebergements {
+  flex: 2;
+  margin-right: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.info_heb {
   background-color: white;
   border-radius: 20px;
-  box-shadow: 5px 5px 5px #f2f2f298;
+  box-shadow: 5px 5px 5px #25202023;
   height: 199px;
   width: 31%; /* 246px */
 }
 
-.retour_results_heberg {
-  background-color: #f2f2f2;
-  border-radius: 20px;
-  width: 66%;
-  max-width: 880px;
-  height: 624px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-#results_heb_ville {
-  width: 91%;
-  height: 428px;
+.resultats_recherche_heb {
+  height: 32%;
   margin: auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  align-content: space-between;
+  padding-bottom: 20px;
 }
 
-.result_heb a {
+.info_heb a {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-decoration: none;
   color: black;
+  height: 100%;
+  margin: 4px;
 }
 
 .img_heb {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  height: 115px;
-  width: 96%; /*236px*/
-  margin: 4px;
+  height: 57%;
+  width: 100%;
+  margin: auto;
 }
+
 .img_heb img {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   height: 100%;
   width: 100%; /*236px*/
+  margin-bottom: 5px;
 }
 
 .txt_heb {
-  margin-left: 8%;
+  margin-left: 5%;
+  height: 42%;
 }
+
 .nom_heb {
   font-weight: bolder;
   font-size: medium;
@@ -328,9 +365,10 @@ button {
   margin-bottom: 41px;
 }
 
-#populaires {
+#plus_populaires {
   background-color: #f2f2f2;
   border-radius: 20px;
+  flex: 1;
   /* width: 31%;*/ /* 420px */
   height: 624px;
   display: flex;
@@ -338,7 +376,7 @@ button {
   justify-content: space-between;
 }
 
-#titre_populaires {
+#en_tete_populaires {
   width: 82%;
   margin: auto;
   display: flex;
@@ -357,61 +395,69 @@ button {
   margin: auto;
 }
 
-.populaire {
+.populaire a {
+  text-decoration: none;
+  color: black;
   display: flex;
   flex-direction: row;
   background-color: white;
-  box-shadow: 5px 5px 5px #f2f2f298;
+  box-shadow: 5px 5px 5px #25202023;
   width: 100%;
-
+  height: 144px;
   border-radius: 20px;
   margin-bottom: 31px;
 }
 
 .populaire a img {
   height: 133px;
-  width: 127px;
+  width: 155px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
 
-.populaire a {
-  text-decoration: none;
-  color: black;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  height: 144px;
-  width: 82%; /* 344px */
-}
-
 .img {
   margin: 4px;
+  margin-right: 15px;
 }
 
-/*
-.populaire .evaluation {
+.legende_heb {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-*/
 
 /* Mise en forme section activités */
-#retour_results_activites {
+#activites {
   margin-bottom: 58px;
 }
 
-#results_activites {
+#resultats_recherche_activites {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
-  height: 444px;
+  height: auto;
+}
+
+#activite1,
+#activite2,
+#activite3,
+#activite4,
+#activite5,
+#activite6 {
+  box-shadow: 0px 5px 5px #25202023;
 }
 
 #activite1,
 #activites2_3,
 #activite4,
 #activites5_6 {
-  width: 22%;
+  flex: 1;
+}
+
+#activite1,
+#activites2_3,
+#activite4 {
+  margin-right: 35px;
 }
 
 #activite1 a,
@@ -420,7 +466,6 @@ button {
 #activite4 a,
 #activite5 a,
 #activite6 a {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -431,6 +476,8 @@ button {
 
 .img_act {
   width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .img_act img {
@@ -444,6 +491,7 @@ button {
   margin-top: 0;
   align-self: flex-start;
   font-weight: bold;
+  padding-left: 20px;
 }
 
 #activite1 {
@@ -453,7 +501,6 @@ button {
   align-items: center;
   height: 444px;
   border-radius: 20px;
-  box-shadow: 5px 5px 5px #f2f2f298;
 }
 
 #activite1 .img_act {
@@ -466,8 +513,6 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
-  width: 22%;
 }
 
 #activite2 {
@@ -477,7 +522,6 @@ button {
   align-items: center;
   height: 235px;
   border-radius: 20px;
-  box-shadow: 5px 5px 5px #f2f2f298;
 }
 
 #activite3 {
@@ -487,7 +531,6 @@ button {
   align-items: center;
   height: 165px;
   border-radius: 20px;
-  box-shadow: 5px 5px 5px #f2f2f298;
 }
 
 #activite2 .img_act {
@@ -509,7 +552,6 @@ button {
   align-items: center;
   height: 444px;
   border-radius: 20px;
-  box-shadow: 5px 5px 5px #f2f2f298;
 }
 
 #activite4 .img_act {
@@ -522,8 +564,6 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
-  width: 22%;
 }
 
 #activite5 {
@@ -533,7 +573,6 @@ button {
   align-items: center;
   height: 195px;
   border-radius: 20px;
-  box-shadow: 5px 5px 5px #f2f2f298;
 }
 
 #activite6 {
@@ -543,7 +582,6 @@ button {
   align-items: center;
   height: 209px;
   border-radius: 20px;
-  box-shadow: 5px 5px 5px #f2f2f298;
 }
 
 #activite5 .img_act {
@@ -561,14 +599,11 @@ button {
 /* Mises en forme footer */
 footer {
   background-color: #f2f2f2;
-}
-
-#info_supp {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-left: 115px;
-  margin-right: 400px;
+  padding-left: 115px;
+  padding-right: 400px;
 }
 
 .footer_nav {
@@ -576,8 +611,11 @@ footer {
 }
 
 .title {
-  font-weight: bold;
-  text-decoration: underline;
+  font-weight: bolder;
+}
+
+.footer_nav li {
+  padding-bottom: 10px;
 }
 
 .footer_nav a {
