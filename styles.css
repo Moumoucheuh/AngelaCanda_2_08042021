@@ -78,6 +78,7 @@ h1 {
   display: flex;
   justify-content: flex-start;
   height: 50px;
+  margin-bottom: 30px;
 }
 
 #search_ville {
@@ -122,12 +123,15 @@ input[type="submit"] {
 }
 
 /* Mise en forme des filtres - icons FA cliquables */
-
+#filtres {
+  margin-bottom: 15px;
+}
 .form_filtres {
   font-weight: bolder;
   font-size: medium;
   display: inline-block;
   margin-right: 25px;
+  margin-bottom: 30px;
 }
 
 input[type="checkbox"] {
@@ -240,6 +244,10 @@ i {
   vertical-align: middle;
 }
 
+#nbr_heb_dispo {
+  margin-bottom: 20px;
+}
+
 /* Mise en forme main générale */
 .titre {
   margin-top: 40px;
@@ -273,7 +281,7 @@ main img {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 624px;
+  height: 50%; /* 624px */
   margin-bottom: 80px;
 }
 
@@ -299,6 +307,7 @@ main img {
 
 .resultats_recherche_heb {
   height: 32%;
+  width: 100%;
   margin: auto;
   display: flex;
   flex-flow: row wrap;
@@ -335,6 +344,7 @@ main img {
 .txt_heb {
   margin-left: 5%;
   height: 42%;
+  overflow: hidden;
 }
 
 .nom_heb {
@@ -424,6 +434,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 /* Mise en forme section activités */
@@ -472,6 +483,7 @@ button {
   align-items: center;
   text-decoration: none;
   color: black;
+  width: 100%;
 }
 
 .img_act {
