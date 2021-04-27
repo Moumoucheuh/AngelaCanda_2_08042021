@@ -199,7 +199,7 @@ input[type="checkbox"] {
 
 input[type="checkbox"] + label:before {
   display: inline-flex;
-  font-family: FontAwesome;
+  font-family: "Font Awesome 5 Free";
   border-radius: 50%;
   background-color: #deebff;
   height: 48px;
@@ -232,6 +232,7 @@ input[type="checkbox"] + label:before {
 } /* checked */
 
 #romantique + label:before {
+  font-weight: 900;
   content: "\f004";
   color: #0065fc;
   font-weight: bold;
