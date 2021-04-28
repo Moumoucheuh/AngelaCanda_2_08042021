@@ -385,7 +385,7 @@ main img {
   margin-bottom: 5px;
 }
 
-.evaluation {
+.txt_heb .evaluation {
   margin-top: 0;
 }
 
@@ -642,8 +642,82 @@ footer {
   color: black;
 }
 
+@media screen and (max-width: 1200px) {
+  #section_heb {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    height: auto;
+  }
+
+  #plus_populaires {
+    max-width: 100%;
+    margin-bottom: 30px;
+    max-height: 300px;
+  }
+
+  #affich_3_populaires {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 230px;
+  }
+
+  .populaire {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #25202023;
+    height: 85%; /* 199px; */
+    width: 28%; /* 246px */
+    overflow: hidden;
+  }
+
+  .populaire a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    box-shadow: 5px 5px 5px #25202023;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 57%;
+    width: 96%;
+    margin: 2%;
+    margin-bottom: 5px;
+  }
+
+  .img img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0;
+    height: 100%;
+    width: 100%; /*236px*/
+    margin: auto;
+  }
+
+  .legende_heb {
+    margin-left: 5%;
+    height: 30%;
+    font-size: xx-small;
+  }
+
+  #hebergements {
+    max-width: 100%;
+    margin: 0;
+    height: 624px;
+  }
+
+  .lieu {
+    font-size: small;
+  }
+}
+
 /*
-@media screen and(max-width: 1024px) {
+@media screen and(max-width: 790px) {
   
 }
 */
