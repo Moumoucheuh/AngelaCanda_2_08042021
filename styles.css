@@ -14,16 +14,17 @@
 #bandeau {
   /* contient le logo à gauche et le menu à droite */
   display: flex;
-  justify-content: space-between;
+  flex-direction: column-reverse;
   margin-bottom: 30px;
 }
 
 #logo {
-  margin-top: 60px;
+  align-self: flex-start;
 }
 
 /* -------------- menu principal */
 #navigation {
+  align-self: flex-end;
   padding-top: 40px;
 }
 
@@ -652,20 +653,21 @@ footer {
   #plus_populaires {
     max-width: 100%;
     margin-bottom: 30px;
-    max-height: 300px;
+    max-height: 340px;
   }
 
   #affich_3_populaires {
     flex-direction: row;
     justify-content: space-between;
-    height: 230px;
+    height: 250px;
+    margin-bottom: 30px;
   }
 
   .populaire {
     background-color: white;
     border-radius: 20px;
     box-shadow: 5px 5px 5px #25202023;
-    height: 85%; /* 199px; */
+    height: 100%; /* 199px; */
     width: 28%; /* 246px */
     overflow: hidden;
   }
@@ -700,9 +702,15 @@ footer {
   }
 
   .legende_heb {
-    margin-left: 5%;
-    height: 30%;
+    height: 40%;
     font-size: xx-small;
+    position: relative;
+    margin-bottom: 2px;
+  }
+
+  .eval {
+    position: absolute;
+    bottom: 0;
   }
 
   #hebergements {
@@ -714,10 +722,91 @@ footer {
   .lieu {
     font-size: small;
   }
+
+  #footer_content {
+    justify-content: center;
+  }
+
+  #footer_content nav {
+    width: auto;
+    margin: auto;
+  }
 }
 
-/*
-@media screen and(max-width: 790px) {
-  
+@media screen and (max-width: 790px) {
+  .marges {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  #navigation {
+    padding-top: 40px;
+  }
+
+  #inscription {
+    color: #0065fc;
+    font-weight: bold;
+  }
+
+  #inscription:hover {
+    font-weight: 900;
+  }
+
+  #menu_principal li {
+    list-style-type: none;
+    display: inline;
+    font-size: medium;
+    padding-bottom: 10px;
+  }
+
+  #nav_site_heb,
+  #nav_site_act {
+    font-weight: normal;
+    border-bottom: 3px solid #f2f2f2;
+  }
+
+  #menu_principal a {
+    text-decoration: none;
+    color: grey;
+    padding-top: 45px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: 10px;
+    height: 100%;
+  }
+
+  /*--------OK-----------*/
+  #menu_principal li:hover {
+    color: #0065fc;
+    border-bottom: 3px solid #0065fc;
+  }
+
+  /*-------OK--------*/
+  #menu_principal li a:active {
+    color: #0065fc;
+    box-shadow: none;
+  }
+
+  #nav_site_heb a:visited,
+  #nav_site_act a:visited {
+    text-decoration: none;
+    color: grey;
+  }
+
+  #inscription a:visited {
+    text-decoration: none;
+    color: #0065fc;
+  }
+
+  #footer_content {
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-start;
+  }
+
+  /*--------------OK----------------*/
+  #footer_content nav {
+    margin-left: 5%;
+    font-size: large;
+  }
 }
-*/
