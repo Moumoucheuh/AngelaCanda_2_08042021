@@ -14,29 +14,22 @@
 #bandeau {
   /* contient le logo à gauche et le menu à droite */
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: row;
+  padding-top: 40px;
   margin-bottom: 30px;
 }
 
 #logo {
-  align-self: flex-start;
-}
-
-/* -------------- menu principal */
-#navigation {
+  flex: 1;
   align-self: flex-end;
-  padding-top: 40px;
+  margin-top: 10px;
 }
 
 #inscription {
-  color: #0065fc;
-  font-weight: bold;
+  order: 3;
 }
 
-#inscription:hover {
-  font-weight: 900;
-}
-
+/* -------------- menu principal */
 #menu_principal li {
   list-style-type: none;
   display: inline;
@@ -70,6 +63,23 @@
 #nav_site_act a:visited {
   text-decoration: none;
   color: grey;
+}
+
+#inscription a {
+  text-decoration: none;
+  color: #0065fc;
+  font-size: medium;
+  font-weight: bold;
+  padding-top: 40px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+#inscription a:hover {
+  font-weight: 900;
+}
+#inscription a:active {
+  box-shadow: 0 1px 0 #0065fc inset;
 }
 
 #inscription a:visited {
@@ -329,7 +339,7 @@ main img {
   justify-content: space-around;
 }
 
-.resultats_recherche_heb {
+#resultats_recherche_heb {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -643,7 +653,7 @@ footer {
   color: black;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1224px) {
   #section_heb {
     flex-direction: column-reverse;
     justify-content: space-between;
@@ -667,7 +677,7 @@ footer {
     background-color: white;
     border-radius: 20px;
     box-shadow: 5px 5px 5px #25202023;
-    height: 100%; /* 199px; */
+    height: 220px; /* 199px; */
     width: 28%; /* 246px */
     overflow: hidden;
   }
@@ -706,6 +716,9 @@ footer {
     font-size: xx-small;
     position: relative;
     margin-bottom: 2px;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 236px;
   }
 
   .eval {
@@ -716,7 +729,15 @@ footer {
   #hebergements {
     max-width: 100%;
     margin: 0;
-    height: 624px;
+  }
+
+  #resultats_recherche_heb {
+    max-height: 624px;
+  }
+
+  .info_heb {
+    height: 199px;
+    margin-bottom: 30px;
   }
 
   .lieu {
@@ -739,24 +760,40 @@ footer {
     margin-right: 5%;
   }
 
-  #navigation {
-    padding-top: 40px;
+  #bandeau {
+    display: inline-block;
+    width: 100%;
+    padding-top: 0;
+  }
+
+  #logo {
+    float: left;
+    padding-top: 0;
   }
 
   #inscription {
-    color: #0065fc;
+    float: right;
+    text-decoration: none;
     font-weight: bold;
+  }
+
+  #menu_principal {
+    text-align: center;
+    margin-top: 80px;
+    padding-bottom: 10px;
+    display: flex;
+    padding-left: 0;
+  }
+
+  #menu_principal li {
+    width: 50%;
+    list-style-type: none;
+    font-size: medium;
+    padding-bottom: 10px;
   }
 
   #inscription:hover {
     font-weight: 900;
-  }
-
-  #menu_principal li {
-    list-style-type: none;
-    display: inline;
-    font-size: medium;
-    padding-bottom: 10px;
   }
 
   #nav_site_heb,
@@ -768,7 +805,6 @@ footer {
   #menu_principal a {
     text-decoration: none;
     color: grey;
-    padding-top: 45px;
     padding-left: 25px;
     padding-right: 25px;
     margin-left: 10px;
@@ -808,5 +844,14 @@ footer {
   #footer_content nav {
     margin-left: 5%;
     font-size: large;
+  }
+
+  #resultats_recherche_heb {
+    flex-flow: column nowrap;
+    width: 100%;
+  }
+
+  .info_heb {
+    width: 100%;
   }
 }
