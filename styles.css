@@ -34,10 +34,6 @@
   list-style-type: none;
   display: inline;
   font-size: medium;
-}
-
-#nav_site_heb,
-#nav_site_act {
   font-weight: normal;
 }
 
@@ -103,62 +99,54 @@ h1 {
 }
 
 /* Mise en forme de la recherche */
-#bloc_recherche {
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-around;
-}
 #recherche_form {
   display: inline-block;
-  width: 418px;
   height: 50px;
   margin-bottom: 30px;
-}
-
-#search_ville {
-  display: inline-block;
-  background-color: #f2f2f2;
-  border: 1px solid #f2f2f2;
-  border-right: 0;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  height: 50px;
-  width: 418px;
-}
-
-#recherche_form input[type="search"] {
-  height: 100%;
-  width: 224px;
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+  border-radius: 15px;
 }
 
 .fas.fa-map-marker-alt {
-  padding-left: 20px;
-  padding-right: 20px;
-  width: auto;
+  height: 35px;
+  width: 50px;
+  float: left;
+  padding-top: 15px;
+  background-color: #f2f2f2;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  margin: auto;
+  text-align: center;
 }
 
-#recherche {
-  border: 1px solid #f2f2f2;
-  font-weight: bold;
-  font-size: large;
-  width: auto;
+#saisie_recherche {
+  height: 100%;
+  width: 224px;
   padding-left: 17px;
+  vertical-align: top;
+  font-weight: bold;
+  font-size: medium;
+  border: none;
 }
 
-input[type="submit"] {
+#submit_rechercher {
+  height: 100%;
+  width: 133px;
+  float: right;
+  margin: none;
   background-color: #0065fc;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
   border-color: #0065fc;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  width: 133px;
-  height: 100%;
+  color: white;
+  font-weight: bold;
+  font-size: medium;
+}
+
+#submit_FA {
+  font-family: "Font Awesome 5 Free";
+  display: none;
 }
 
 /* Mise en forme des filtres - icons FA cliquables */
@@ -788,62 +776,39 @@ footer {
   #menu_principal li {
     width: 50%;
     list-style-type: none;
-    font-size: medium;
     padding-bottom: 10px;
-  }
-
-  #inscription:hover {
-    font-weight: 900;
-  }
-
-  #nav_site_heb,
-  #nav_site_act {
-    font-weight: normal;
     border-bottom: 3px solid #f2f2f2;
   }
 
-  #menu_principal a {
-    text-decoration: none;
-    color: grey;
-    padding-left: 25px;
-    padding-right: 25px;
-    margin-left: 10px;
-    height: 100%;
-  }
-
-  /*--------OK-----------*/
   #menu_principal li:hover {
     color: #0065fc;
     border-bottom: 3px solid #0065fc;
   }
 
-  /*-------OK--------*/
   #menu_principal li a:active {
     color: #0065fc;
     box-shadow: none;
   }
 
-  #nav_site_heb a:visited,
-  #nav_site_act a:visited {
-    text-decoration: none;
-    color: grey;
+  #search_ville {
+    width: 345px;
   }
 
-  #inscription a:visited {
-    text-decoration: none;
-    color: #0065fc;
+  #submit_rechercher {
+    display: none;
   }
 
-  #footer_content {
-    flex-direction: column;
-    justify-content: space-between;
-    align-content: flex-start;
-  }
-
-  /*--------------OK----------------*/
-  #footer_content nav {
-    margin-left: 5%;
-    font-size: large;
+  #submit_FA {
+    display: inline;
+    font-family: "Font Awesome 5 Free";
+    background-color: #0065fc;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-color: #0065fc;
+    border-radius: 15px;
+    width: 60px;
+    height: 100%;
   }
 
   #resultats_recherche_heb {
@@ -853,5 +818,17 @@ footer {
 
   .info_heb {
     width: 100%;
+    height: ;
+  }
+
+  #footer_content {
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-start;
+  }
+
+  #footer_content nav {
+    margin-left: 5%;
+    font-size: large;
   }
 }
