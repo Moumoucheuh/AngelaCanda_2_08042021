@@ -414,7 +414,7 @@ button {
 #en_tete_populaires {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   font-size: 1.3em;
   font-weight: bolder;
 }
@@ -790,16 +790,24 @@ footer {
     box-shadow: none;
   }
 
-  #search_ville {
-    width: 345px;
+  #recherche_form {
+    width: 100%;
   }
 
   #submit_rechercher {
     display: none;
   }
 
+  #saisie_recherche {
+    max-width: 224px;
+    min-width: 120px;
+    width: auto;
+    font-size: small;
+  }
+
   #submit_FA {
     display: inline;
+    float: right;
     font-family: "Font Awesome 5 Free";
     background-color: #0065fc;
     color: white;
@@ -807,8 +815,21 @@ footer {
     font-size: 18px;
     border-color: #0065fc;
     border-radius: 15px;
-    width: 60px;
+    max-width: 60px;
+    min-width: 50px;
     height: 100%;
+  }
+
+  .form_filtres {
+    margin-right: none;
+  }
+
+  .form_filtres #intitule {
+    margin-right: 60px;
+  }
+
+  .titre {
+    font-size: medium;
   }
 
   #section_heb {
@@ -818,6 +839,8 @@ footer {
 
   #plus_populaires {
     max-height: 624px;
+    padding-left: 19px;
+    padding-right: 19px;
   }
 
   #affich_3_populaires {
@@ -831,7 +854,7 @@ footer {
 
   .populaire {
     width: 100%;
-    height: 200px;
+    height: 180px;
     margin-bottom: 30px;
     background-color: white;
     border-radius: 20px;
@@ -880,6 +903,8 @@ footer {
 
   #hebergements {
     background-color: white;
+    padding-left: 19px;
+    padding-right: 19px;
   }
 
   button {
@@ -894,24 +919,40 @@ footer {
 
   .info_heb {
     width: 100%;
-    height: 300px;
+    max-height: 273px;
+    box-shadow: 5px 5px 5px 5px #25202023;
+  }
+
+  .img_heb {
+    max-height: 153px;
+  }
+
+  .img_heb img {
+    height: 100%;
+  }
+
+  .txt_heb {
+    font-size: xx-small;
+    max-height: 100px;
   }
 
   #activites {
-    height: 1500px;
-    max-width: auto;
-    justify-content: flex-start;
-    padding-right: 38px;
-    padding-left: 38px;
-    margin-bottom: 50px;
+    height: auto;
+    padding-left: 19px;
+    padding-right: 19px;
   }
 
   #resultats_recherche_activites {
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    min-height: 1500px;
-    max-width: 790;
+    /* height: 83%; /* 444px */
+  }
+
+  #activite1,
+  #activites2_3,
+  #activite4,
+  #activites5_6 {
+    width: 100%;
   }
 
   #activite1,
@@ -920,18 +961,21 @@ footer {
   #activite4,
   #activite5,
   #activite6 {
-    width: 100%;
-    height: 300px;
-    margin: auto;
+    min-height: 177px;
     margin-bottom: 30px;
   }
 
   #activites2_3,
   #activites5_6 {
-    width: 100%;
-    min-height: 630;
-    margin: auto;
-    margin-bottom: 30px;
+    height: auto;
+  }
+
+  .img_act {
+    height: 124px;
+  }
+
+  .img_act img {
+    max-height: 124px;
   }
 
   #footer_content {
