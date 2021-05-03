@@ -12,9 +12,7 @@
 
 /* Mise en page header */
 #bandeau {
-  /* contient le logo à gauche et le menu à droite */
   display: flex;
-  flex-direction: row;
   padding-top: 40px;
   margin-bottom: 30px;
 }
@@ -162,16 +160,7 @@ h1 {
   margin-bottom: 30px;
 }
 
-input[type="checkbox"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-}
-
-#econo,
-#family,
-#romantic,
-#pets {
+label {
   border-radius: 45px;
   border-top: 2px solid #d9d9d9;
   border-right: 2px solid #d9d9d9;
@@ -185,11 +174,8 @@ input[type="checkbox"] {
   position: relative;
 }
 
-#econo:hover,
-#family:hover,
-#romantic:hover,
-#pets:hover {
-  box-shadow: 0 5px 5px 1px #0065fc inset;
+label:hover {
+  background: linear-gradient(0.25turn, #deebff, #0065fc) no-repeat;
 }
 
 input[type="checkbox"] {
@@ -206,53 +192,46 @@ input[type="checkbox"] + label:before {
   align-items: center;
   justify-content: center;
   margin-right: 10px;
+  color: #0065fc;
+}
+
+.form_filtres input[type="checkbox"]:checked + label:before {
+  color: #deebff;
+  background-color: #0065fc;
 }
 
 #eco + label:before {
   content: "\f53a";
-  color: #0065fc;
-} /* unchecked */
+}
 
 #eco:checked + label:before {
   content: "\f53a";
-  color: #deebff;
-  background-color: #0065fc;
-} /* checked */
+}
 
 #familial + label:before {
   content: "\f1ae";
-  color: #0065fc;
-} /* unchecked */
+}
 
 #familial:checked + label:before {
   content: "\f1ae";
-  color: #deebff;
-  background-color: #0065fc;
-} /* checked */
+}
 
 #romantique + label:before {
-  font-weight: 900;
   content: "\f004";
-  color: #0065fc;
-  font-weight: bold;
-} /* unchecked */
+  /* font-weight : bold; */
+}
 
 #romantique:checked + label:before {
   content: "\f004";
-  color: #deebff;
-  background-color: #0065fc;
-} /* checked */
+}
 
 #animaux + label:before {
   content: "\f6d3";
-  color: #0065fc;
-} /* unchecked */
+}
 
 #animaux:checked + label:before {
   content: "\f6d3";
-  color: #deebff;
-  background-color: #0065fc;
-} /* checked */
+}
 
 /* Mise en forme info nbr d'heb dispo ville saisie */
 .fas.fa-info {
@@ -307,7 +286,7 @@ main img {
 /* Mise en forme section hebergements */
 #section_heb {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   height: 624px; /* 52%;*/
   margin-bottom: 30px;
 }
@@ -316,9 +295,7 @@ main img {
   flex: 2;
   max-width: 880px;
   margin-right: 40px;
-  padding-left: 38px;
-  padding-right: 38px;
-  padding-bottom: 30px;
+  padding: 0 38px 30px 38px;
   background-color: #f2f2f2;
   border-radius: 20px;
   display: flex;
@@ -335,19 +312,17 @@ main img {
 }
 
 .info_heb {
-  background-color: white;
   border-radius: 20px;
   box-shadow: 5px 5px 5px #25202023;
   height: 37%; /* 199px; */
   width: 28%; /* 246px */
   overflow: hidden;
+  background-color: white;
 }
 
 .info_heb a {
   text-decoration: none;
   color: black;
-  height: 100%;
-  width: 100%;
 }
 
 .img_heb {
@@ -390,7 +365,7 @@ main img {
 
 button {
   border: none;
-  color: black;
+
   font-size: large;
   font-weight: bold;
   align-self: flex-start;
@@ -430,7 +405,6 @@ button {
 .populaire {
   width: 100%;
   height: 29%; /*144px; */
-  margin-bottom: 0;
   background-color: white;
   border-radius: 20px;
 }
@@ -440,8 +414,6 @@ button {
   color: black;
   background-color: white;
   box-shadow: 5px 5px 5px #25202023;
-  width: 100%;
-  height: 100%;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -490,15 +462,15 @@ button {
   height: 83%; /* 444px */
 }
 
-#activite1,
-#activite2,
-#activite3,
-#activite4,
-#activite5,
-#activite6 {
+.carte_activite {
   box-shadow: 0px 5px 5px #25202023;
   border-radius: 20px;
   overflow: hidden;
+}
+
+.carte_activite a {
+  text-decoration: none;
+  color: black;
 }
 
 #activite1,
@@ -509,25 +481,28 @@ button {
   height: 100%;
 }
 
-#activite2 {
+#activite2,
+#actvite3,
+#activite5,
+#activite6 {
   width: 100%;
+}
+
+#activite2 {
   height: 53%; /* 235px*/
   margin-bottom: 44px;
 }
 
 #activite3 {
-  width: 100%;
   height: 37%; /* 163px*/
 }
 
 #activite5 {
-  width: 100%;
   height: 44%; /* 195px*/
   margin-bottom: 44px;
 }
 
 #activite6 {
-  width: 100%;
   height: 47%; /* 209px */
 }
 
@@ -537,21 +512,8 @@ button {
   margin-right: 45px;
 }
 
-#activite1 a,
-#activite2 a,
-#activite3 a,
-#activite4 a,
-#activite5 a,
-#activite6 a {
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  color: black;
-}
-
 #activite1 .img_act,
 #activite4 .img_act {
-  width: 100%;
   height: 88%; /* 390px */
   margin: auto;
   border-top-left-radius: 20px;
@@ -559,7 +521,6 @@ button {
 }
 
 #activite2 .img_act {
-  width: 100%;
   height: 76%; /* 180px */
   margin: auto;
   border-top-left-radius: 20px;
@@ -567,7 +528,6 @@ button {
 }
 
 #activite3 .img_act {
-  width: 100%;
   height: 66%; /* 108px */
   margin: auto;
   border-top-left-radius: 20px;
@@ -575,7 +535,6 @@ button {
 }
 
 #activite5 .img_act {
-  width: 100%;
   height: 71%; /* 139px */
   margin: auto;
   border-top-left-radius: 20px;
@@ -583,19 +542,13 @@ button {
 }
 
 #activite6 .img_act {
-  width: 100%;
   height: 74%; /* 155px */
   margin: auto;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
-#activite1 img,
-#activite2 img,
-#activite3 img,
-#activite4 img,
-#activite5 img,
-#activite6 img {
+.carte_activite img {
   width: 100%;
   height: 100%;
   border-top-left-radius: 20px;
@@ -662,28 +615,13 @@ footer {
   }
 
   .populaire {
-    background-color: white;
-    border-radius: 20px;
     box-shadow: 5px 5px 5px #25202023;
     height: 220px; /* 199px; */
     width: 28%; /* 246px */
     overflow: hidden;
   }
 
-  .populaire a {
-    text-decoration: none;
-    color: black;
-    background-color: white;
-    box-shadow: 5px 5px 5px #25202023;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    overflow: hidden;
-  }
-
   .img {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
     height: 57%;
     width: 96%;
     margin: 2%;
@@ -695,23 +633,16 @@ footer {
     border-top-right-radius: 20px;
     border-bottom-left-radius: 0;
     height: 100%;
-    width: 100%; /*236px*/
     margin: auto;
   }
 
   .legende_heb {
     height: 40%;
     font-size: xx-small;
-    position: relative;
     margin-bottom: 2px;
     padding-left: 15px;
     padding-right: 15px;
     max-width: 236px;
-  }
-
-  .eval {
-    position: absolute;
-    bottom: 0;
   }
 
   #hebergements {
@@ -730,15 +661,6 @@ footer {
 
   .lieu {
     font-size: small;
-  }
-
-  #footer_content {
-    justify-content: center;
-  }
-
-  #footer_content nav {
-    width: auto;
-    margin: auto;
   }
 }
 
@@ -761,27 +683,22 @@ footer {
 
   #inscription {
     float: right;
-    text-decoration: none;
-    font-weight: bold;
   }
 
   #menu_principal {
+    display: flex;
     text-align: center;
     margin-top: 80px;
-    padding-bottom: 10px;
-    display: flex;
     padding-left: 0;
   }
 
   #menu_principal li {
     width: 50%;
-    list-style-type: none;
     padding-bottom: 10px;
     border-bottom: 3px solid #f2f2f2;
   }
 
   #menu_principal li:hover {
-    color: #0065fc;
     border-bottom: 3px solid #0065fc;
   }
 
@@ -794,15 +711,15 @@ footer {
     width: 100%;
   }
 
-  #submit_rechercher {
-    display: none;
-  }
-
   #saisie_recherche {
     max-width: 224px;
     min-width: 120px;
     width: auto;
     font-size: small;
+  }
+
+  #submit_rechercher {
+    display: none;
   }
 
   #submit_FA {
@@ -820,31 +737,26 @@ footer {
     height: 100%;
   }
 
-  .form_filtres {
-    margin-right: none;
-  }
-
-  .form_filtres #intitule {
-    margin-right: 60px;
-  }
-
   .titre {
     font-size: medium;
   }
 
-  #section_heb {
-    width: 100%;
+  /* #section_heb {
     height: auto;
-  }
+  } */
 
-  #plus_populaires {
-    max-height: 624px;
+  #section_heb #plus_populaires,
+  #section_heb #hebergements,
+  #activites {
     padding-left: 19px;
     padding-right: 19px;
   }
 
+  #plus_populaires {
+    max-height: 624px;
+  }
+
   #affich_3_populaires {
-    flex: 2;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -856,19 +768,6 @@ footer {
     width: 100%;
     height: 180px;
     margin-bottom: 30px;
-    background-color: white;
-    border-radius: 20px;
-  }
-
-  .populaire a {
-    text-decoration: none;
-    color: black;
-    background-color: white;
-    box-shadow: 5px 5px 5px #25202023;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    overflow: hidden;
   }
 
   .img {
@@ -876,15 +775,12 @@ footer {
     height: 100%;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    float: left;
     margin: auto;
   }
 
   .img img {
-    width: 100%;
     height: 93%;
     margin: 5px;
-    border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     border-top-right-radius: 0px;
   }
@@ -892,19 +788,10 @@ footer {
   .legende_heb {
     height: 100%;
     padding-left: 20px;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .eval {
-    position: absolute;
-    bottom: 0;
   }
 
   #hebergements {
     background-color: white;
-    padding-left: 19px;
-    padding-right: 19px;
   }
 
   button {
@@ -912,7 +799,7 @@ footer {
   }
 
   #resultats_recherche_heb {
-    flex-flow: column nowrap;
+    flex-flow: column;
     width: 100%;
     max-height: 1500px;
   }
@@ -923,23 +810,12 @@ footer {
     box-shadow: 5px 5px 5px 5px #25202023;
   }
 
-  .img_heb {
-    max-height: 153px;
-  }
-
-  .img_heb img {
-    height: 100%;
-  }
-
   .txt_heb {
     font-size: xx-small;
-    max-height: 100px;
   }
 
   #activites {
     height: auto;
-    padding-left: 19px;
-    padding-right: 19px;
   }
 
   #resultats_recherche_activites {
@@ -955,13 +831,8 @@ footer {
     width: 100%;
   }
 
-  #activite1,
-  #activite2,
-  #activite3,
-  #activite4,
-  #activite5,
-  #activite6 {
-    min-height: 177px;
+  .carte_activite {
+    max-height: 177px;
     margin-bottom: 30px;
   }
 
@@ -970,12 +841,13 @@ footer {
     height: auto;
   }
 
-  .img_act {
-    height: 124px;
-  }
-
   .img_act img {
     max-height: 124px;
+  }
+
+  .lieu {
+    height: 53px;
+    margin: auto;
   }
 
   #footer_content {
