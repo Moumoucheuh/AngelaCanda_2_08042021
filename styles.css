@@ -283,6 +283,7 @@ main img {
   display: flex;
   max-height: 624px;
   margin-bottom: 30px;
+  justify-content: space-between;
 }
 
 #hebergements,
@@ -296,9 +297,7 @@ main img {
 }
 
 #hebergements {
-  flex: 2;
-  max-width: 880px;
-  margin-right: 40px;
+  max-width: 60%;
 }
 
 #resultats_recherche_heb {
@@ -356,9 +355,7 @@ button {
 }
 
 #plus_populaires {
-  flex: 1;
-  /* width: 31%;*/ /* 420px */
-  max-width: 420px;
+  max-width: 27%;
 }
 
 #en_tete_populaires {
@@ -521,6 +518,7 @@ footer {
   #section_heb {
     flex-direction: column-reverse;
     max-height: fit-content;
+    max-height: -moz-max-content;
   }
 
   #plus_populaires {
