@@ -379,14 +379,14 @@ button {
   height: 29%;
 }
 
-.img {
+.img_populaire {
   width: 37%;
   height: 100%;
   float: left;
   margin: auto;
 }
 
-.img img {
+.img_populaire img {
   width: 100%;
   height: 100%;
   border-top-left-radius: 20px;
@@ -536,12 +536,12 @@ footer {
     width: 30%;
   }
 
-  .img {
+  .img_populaire {
     height: 57%;
     width: 100%;
   }
 
-  .img img {
+  .img_populaire img {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     border-bottom-left-radius: 0;
@@ -671,13 +671,13 @@ footer {
     margin-bottom: 30px;
   }
 
-  .img {
+  .img_populaire {
     width: 37%;
     height: 100%;
     margin: auto;
   }
 
-  .img img {
+  .img_populaire img {
     height: 100%;
     border-bottom-left-radius: 20px;
     border-top-right-radius: 0px;
